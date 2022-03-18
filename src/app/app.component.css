@@ -1,0 +1,36 @@
+* {
+  text-align: center;
+}
+
+.conteneur {
+  display: grid;
+  grid-template:  "en-tete              en-tete"
+                  "personnes-actives historique"
+                  "personnes-actives nouveau-message";
+}
+
+@media (max-width: 600px) {
+  .conteneur {
+    grid-template:  "en-tete"
+                    "historique"
+                    "personnes-actives"
+                    "nouveau-message";
+  }
+}
+
+app-en-tete {
+  grid-area: en-tete;
+}
+
+app-historique {
+  grid-area: historique;
+}
+
+app-personnes-actives {
+  height: 500px;
+  grid-area: personnes-actives;
+}
+
+app-nouveau-message {
+  grid-area: nouveau-message;
+}

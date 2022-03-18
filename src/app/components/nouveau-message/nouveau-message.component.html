@@ -1,0 +1,20 @@
+<h4>Nouveau message:</h4>
+<p>
+  {{ monFormulaire.value | json }}
+</p>
+<form #monFormulaire="ngForm" (ngSubmit)="submitForm(monFormulaire.value)">
+  <div>
+    <label>De:</label>
+    <input name="pseudo" class="input is-primary" type="text" placeholder="Auteur" ngModel [value]="monFormulaire.value.pseudo">
+  </div>
+
+  <div>
+    <label>Corps de texte:</label>
+    <input name="message"  class="input is-primary" type="text" placeholder="Texte" ngModel [value]="monFormulaire.value.message">
+  </div>
+
+  <div>
+    <button class="button is-warning is-light">Valider</button>
+    <input type="button" class="button is-warning is-light" id="annuler" value="Annuler" (click)="annuler()">
+  </div>
+</form>

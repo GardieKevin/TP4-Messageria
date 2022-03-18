@@ -1,0 +1,9 @@
+.entete {
+  font-size: xxx-large;
+  font-family: "Bookman Old Style";
+  display: flex;
+  justify-content: center;
+  background-color: darkred;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}

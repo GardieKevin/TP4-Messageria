@@ -1,0 +1,10 @@
+<h3>Personnes actives</h3>
+<div *ngIf="auteurs.length ===0">
+  Aucune personne active
+</div>
+<div>
+  <a class="personne" *ngFor="let a of auteurs" href="#">
+    {{ a }}
+  </a>
+</div>
+

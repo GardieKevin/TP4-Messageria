@@ -1,0 +1,8 @@
+<div *ngIf="leTableauRecupereParLeService.length === 0">
+  Aucun message
+</div>
+<div>
+  <p class="messageForm" *ngFor="let m of leTableauRecupereParLeService" href="#">
+    {{ m.auteur}} a écrit {{ m.text}} le {{ m.date |date :'short' }}
+  </p>
+</div>
