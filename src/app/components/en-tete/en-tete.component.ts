@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from "rxjs";
+import {messagesService} from "../../services/messages.service";
 
 @Component({
   selector: 'app-en-tete',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnTeteComponent implements OnInit {
 
-  constructor() { }
+  public recupereDeLApi: Observable<any>; //cet attribut contiendra le retour de l'appel à l'api
+
+  constructor(private svc: messagesService) {
+    this.recupereDeLApi = this.svc.getApi();
+  }
 
   ngOnInit(): void {
   }

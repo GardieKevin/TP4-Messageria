@@ -6,7 +6,8 @@
   display: grid;
   grid-template:  "en-tete              en-tete"
                   "personnes-actives historique"
-                  "personnes-actives nouveau-message";
+                  "personnes-actives nouveau-message"
+                  "routage                   routage";
 }
 
 @media (max-width: 600px) {
@@ -14,8 +15,13 @@
     grid-template:  "en-tete"
                     "historique"
                     "personnes-actives"
-                    "nouveau-message";
+                    "nouveau-message"
+                    "routage";
   }
+}
+
+router-outlet {
+  grid-area: routage;
 }
 
 app-en-tete {

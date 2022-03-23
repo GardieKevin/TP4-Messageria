@@ -7,9 +7,8 @@ import {messagesService} from "../../services/messages.service";
   templateUrl: './historique.component.html',
   styleUrls: ['./historique.component.css']
 })
-export class HistoriqueComponent implements OnInit {
+export class historiqueComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
   public leTableauRecupereParLeService: Message[];

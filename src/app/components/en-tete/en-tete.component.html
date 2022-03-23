@@ -1,1 +1,9 @@
 <h1 class="entete">MESSAGERIE</h1>
+<p *ngIf="recupereDeLApi | async as api">
+  {{api.quote }}
+</p>
+
+<ul>
+  <li><a href="/abc">ABC</a></li>
+  <li><a routerLink="/xyz">XYZ</a></li>
+</ul>

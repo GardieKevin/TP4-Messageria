@@ -1,6 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Message} from "../modeles/Message";
 import {Auteur} from "../modeles/Auteur";
+import {Observable} from "rxjs";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,7 @@ export class messagesService {
   public messages: Message[];
   public auteurs: Auteur[];
 
-  constructor() {
+  constructor(private http: HttpClient) { //injection de dépendance pour le getApi
     this.messages = [];
     this.auteurs = [];
   }
@@ -25,5 +27,9 @@ export class messagesService {
       this.messages.pop();
       this.auteurs.pop();
     }
+  }
+
+  public getApi(): Observable<any>{
+    return this.http.get('https://api.kanye.rest');
   }
 }
